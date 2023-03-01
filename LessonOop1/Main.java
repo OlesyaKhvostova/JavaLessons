@@ -8,14 +8,16 @@ public class Main {
         machine.addProduct(new Product("Twix", 70.99));
         machine.addProduct(new Product("Алёнка", 90));
         machine.addProduct(new Product("Колокольчик", 85));
-        machine.addProduct(new Perishable("Молоко Бурёнка", 85, new Date(2023, 1, 25)));
-        machine.addProduct(new Perishable("Молоко Коровка", 85, new Date(2023, 1, 25)));
-        machine.addProduct(new Perishable("Молоко Василёк", 85, new Date(2023, 1, 25)));
+        machine.addProduct(new Milk("Домик в деревне", 100, new Date(2023, 1, 25)));
+        machine.addProduct(new Milk("Простоквашино", 110, new Date(2023, 1, 25)));
+        machine.addProduct(new Chocolate("Несквик", "Молочный", 200));
+        machine.addProduct(new Chocolate("Марс", "Белый", 150));
+
 
         System.out.println(machine);
         System.out.println("__________________________________");
         System.out.println(machine.findProduct("Молоко"));
-        System.out.println(machine.findProduct("Алёнка"));
+        System.out.println(machine.findProduct("Шоколад"));
         System.out.println(machine.findProduct("Пиво"));
         System.out.println("__________________________________");
         System.out.println("продан: " + machine.sellProduct(machine.findProduct("Twix").get(0)));

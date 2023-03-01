@@ -12,7 +12,7 @@ public class Milk extends Product {
     @Override
     public String toString() {
         StringBuilder localString = new StringBuilder(super.toString());
-        localString.append(String.format("Молоко годно до %s Производитель %s", expireDate.toString(), producer));
+        localString.append(String.format(" годно до %s; Производитель: %s", expireDate.toString(), producer));
         return localString.toString();
     }
 }
